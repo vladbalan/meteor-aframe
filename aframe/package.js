@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   
-  api.use('vladbalan:aframe-blaze');
+  api.use('vladbalan:aframe-blaze@0.0.1');
 
   api.addFiles('client/src/aframe.js', 'client');
 });
