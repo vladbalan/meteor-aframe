@@ -23,4 +23,4 @@ Add WebVR goodness to your Meteor app with A-Frame and Blaze.
   {{/aScene}}
 </template>
 ```
-Read the full documentation [here](https://github.com/vladbalan/meteor-aframe/README.md).
+Read the full documentation [here](https://github.com/vladbalan/meteor-aframe).
