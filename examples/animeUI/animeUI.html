@@ -1,0 +1,60 @@
+<template name="AnimeUI">
+  {{#aScene}}
+      {{#aEntity position="1.75 0 1.2" rotation="0 28 0"}}
+        {{#aCamera near="0.1"}}{{/aCamera}}
+      {{/aEntity}}
+
+      {{#aModel src="../models/engine.dae" position="0 0 -3" rotation="90 0 0" scale="18 18 18"}}{{/aModel}}
+
+      {{#aEntity id="wall-lights" components=wallLights.components}}
+        {{#each wallLights.items}}
+          {{#aEntity components}}
+            {{#each ../parts}}
+              {{#aPlane components}}
+                {{#if ../animation}}
+                  {{#aAnimation ../animation}}{{/aAnimation}}
+                {{/if}}
+              {{/aPlane}}
+            {{/each}}
+          {{/aEntity}}
+        {{/each}}
+      {{/aEntity}}
+
+      {{#each schematics}}
+        {{#aEntity id=id components=components}}
+          {{#each ../parts}}
+            {{#aImage image}}
+              {{#aAnimation ../animation}}{{/aAnimation}}
+            {{/aImage}}
+          {{/each}}
+        {{/aEntity}}
+      {{/each}}
+
+      {{#each ringsGroups}}
+        {{#aEntity id=id components=components}}
+          {{#each ../parts}}
+            {{#aImage image}}
+              {{#aAnimation ../animation}}{{/aAnimation}}
+            {{/aImage}}
+          {{/each}}
+        {{/aEntity}}
+      {{/each}}
+
+      <!-- Lights. -->
+      {{#aLight type="point" color="#94c6ff" distance="15" position="0 0 -12"}}
+        {{#aAnimation attribute="intensity" from="0" to="2" begin="750" dur="500" fill="both"}}{{/aAnimation}}
+      {{/aLight}}
+      {{#aLight type="point" color="#94c6ff" distance="17" position="0 0 -6"}}
+        {{#aAnimation attribute="intensity" from="0" to="1" begin="500" dur="500" fill="both"}}{{/aAnimation}}
+      {{/aLight}}
+      {{#aLight type="ambient" color="#4f6487"}}
+        
+      {{/aLight}}
+
+      <!-- Sounds. -->
+      {{#aEntity sound="autoplay: true; src: ../_sounds/321103__nsstudios__blip1.wav;"}}
+      {{/aEntity}}
+      {{#aEntity sound="autoplay: true; src: ../_sounds/321104__nsstudios__blip2.wav;"}}
+      {{/aEntity}}
+    {{/aScene}}
+</template>

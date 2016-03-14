@@ -35,6 +35,7 @@ Add WebVR goodness to your Meteor app with A-Frame and Blaze.
 - [Helpers](#helpers)
   - [Core](#core)
   - [Primitives](#primitives)
+- [Examples](#examples)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -153,6 +154,10 @@ From A-Frame's [docs](https://aframe.io/docs/core/):
 - `aSphere`
 - `aVideo`
 - `aVideosphere`
+
+## Examples
+
+Checkout some [examples](examples)!
 
 ## License
 
