@@ -4,7 +4,7 @@
         {{#aCamera near="0.1"}}{{/aCamera}}
       {{/aEntity}}
 
-      {{#aModel src="../models/engine.dae" position="0 0 -3" rotation="90 0 0" scale="18 18 18"}}{{/aModel}}
+      {{#aModel src="../_assets/models/engine.dae" position="0 0 -3" rotation="90 0 0" scale="18 18 18"}}{{/aModel}}
 
       {{#aEntity id="wall-lights" components=wallLights.components}}
         {{#each wallLights.items}}
@@ -52,9 +52,9 @@
       {{/aLight}}
 
       <!-- Sounds. -->
-      {{#aEntity sound="autoplay: true; src: ../_sounds/321103__nsstudios__blip1.wav;"}}
+      {{#aEntity sound="autoplay: true; src: ../_assets/_sounds/321103__nsstudios__blip1.wav;"}}
       {{/aEntity}}
-      {{#aEntity sound="autoplay: true; src: ../_sounds/321104__nsstudios__blip2.wav;"}}
+      {{#aEntity sound="autoplay: true; src: ../_assets/_sounds/321104__nsstudios__blip2.wav;"}}
       {{/aEntity}}
     {{/aScene}}
 </template>

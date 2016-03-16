@@ -5,10 +5,19 @@ The following examples are taken from the [A-Frame examples page](https://aframe
 
 # Hello World
 
-- Original example on [aframe.io](https://aframe.io/examples/showcase/helloworld/)
-- Live [demo](http://vlad.balan.space/magic/examples/HelloWorld) using `vladbalan:aframe`
+- Original version on aframe.io:
+  - [demo](https://aframe.io/examples/showcase/helloworld/)
+  - [source](https://github.com/aframevr/aframe/tree/master/boilerplate-helloworld)
+- Meteor version using `vladbalan:aframe`:
+  - [demo](http://vlad.balan.space/magic/examples/HelloWorld)
+  - [source](HelloWorld)
+
 
 # Anime UI
 
-- Original example on [aframe.io](https://aframe.io/examples/showcase/anime-UI/)
-- Live [demo](http://vlad.balan.space/magic/examples/AnimeUI) using `vladbalan:aframe`
+- Original version on aframe.io:
+  - [demo](https://aframe.io/examples/showcase/anime-UI/)
+  - [source](https://github.com/aframevr/aframe/tree/master/examples/showcase-anime-UI)
+- Meteor version using `vladbalan:aframe`:
+  - [demo](http://vlad.balan.space/magic/examples/AnimeUI)
+  - [source](AnimeUI)
