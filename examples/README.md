@@ -6,7 +6,6 @@ Examples
 This app fetches a random equirectangular photo from the Flickr API, and sets it as the scene's sky. The user has the option to request another random sky.
 
 - [demo](http://vlad.balan.space/magic/examples/FlickrJump)
-- [source](flickrJump)
 
 ## A-Frame examples, refactored
 
