@@ -1,6 +1,6 @@
 Package.describe({
   name: 'vladbalan:aframe-blaze',
-  version: '0.0.1',
+  version: '0.2.0',
   summary: 'Create WebVR apps with A-Frame and Blaze',
   git: 'https://github.com/vladbalan/meteor-aframe',
   documentation: 'README.md'
