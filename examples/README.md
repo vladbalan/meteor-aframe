@@ -1,9 +1,18 @@
 Examples
 ===============================
 
+## Flickr Jump
+
+This app fetches a random equirectangular photo from the Flickr API, and sets it as the scene's sky. The user has the option to request another random sky.
+
+- [demo](http://vlad.balan.space/magic/examples/FlickrJump)
+- [source](FlickrJump)
+
+## A-Frame examples, refactored
+
 The following examples are taken from the [A-Frame examples page](https://aframe.io/examples/) and rewritten to use the package's syntax and make use of Meteor's power to create cleaner, shorter code.
 
-# Hello World
+### Hello World
 
 - Original version on aframe.io:
   - [demo](https://aframe.io/examples/showcase/helloworld/)
@@ -13,7 +22,7 @@ The following examples are taken from the [A-Frame examples page](https://aframe
   - [source](HelloWorld)
 
 
-# Anime UI
+### Anime UI
 
 - Original version on aframe.io:
   - [demo](https://aframe.io/examples/showcase/anime-UI/)
