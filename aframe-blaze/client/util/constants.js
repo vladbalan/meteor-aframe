@@ -1,12 +1,12 @@
 COMPONENTS = ['camera', 'cursor', 'fog', 'geometry', 'light', 'loader', 'look-at', 'look-controls', 'material', 'position', 'raycaster', 'rotation', 'scale', 'sound', 'visible', 'wasd-controls'];
-ENTITY_ATTRIBUTES = ['mixin'];
+ENTITY_ATTRIBUTES = ['id', 'mixin'];
 COORDINATE_SYSTEMS = ['position', 'rotation', 'scale', 'to', 'from'];
-ANIMATION_ATTRIBUTES = ['attribute', 'begin', 'direction', 'dur', 'easing', 'fill', 'from', 'repeat', 'to'];
-COMMON_ATTRIBUTES = ['position', 'rotation', 'scale'];
+ANIMATION_ATTRIBUTES = ['id', 'attribute', 'begin', 'direction', 'dur', 'easing', 'fill', 'from', 'repeat', 'to'];
+COMMON_ATTRIBUTES = ['id', 'position', 'rotation', 'scale', 'visible'];
 PRIMITIVES = [
   {
     name: 'aCamera',
-    attributes: ['cursor-color', 'cursor-maxdistance', 'cursor-offset', 'cursor-opacity', 'cursor-scale', 'cursor-visible', 'far', 'fov', 'look-controls-enabled', 'near', 'wasd-controls-enabled']
+    attributes: ['cursor', 'cursor-color', 'cursor-maxdistance', 'cursor-offset', 'cursor-opacity', 'cursor-scale', 'cursor-visible', 'far', 'fov', 'look-controls-enabled', 'near', 'wasd-controls-enabled']
   },
   {
     name: 'aCube',

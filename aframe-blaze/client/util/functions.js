@@ -18,17 +18,24 @@ stringifyComponent = function (componentName, properties) {
 }
 
 setAttributes = function (data, templateName, attributeNames) {
-  Template[templateName].onRendered(function(){
-    var tmpl = Template.instance();
+  var helpers = {}
+    attributes = [];
 
-    _.each(attributeNames, function(attributeName){
-      var attributeValue = data[attributeName]
+  _.each(attributeNames, function(attributeName){
+      var component = {},
+        attributeValue = data[attributeName];
       if (attributeValue) {
         if (_.isObject(attributeValue)) {
           attributeValue = stringifyComponent(attributeName, attributeValue);
         }
-        $(tmpl.firstNode).attr(attributeName, attributeValue);
+        component[attributeName] = attributeValue;
+        attributes.push(component);
       }
-    });
+  });
+  
+  Template[templateName].helpers({
+    attributes: function () {
+      return attributes;
+    }
   });
 }
