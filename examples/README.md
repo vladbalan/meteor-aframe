@@ -6,7 +6,7 @@ Examples
 This app fetches a random equirectangular photo from the Flickr API, and sets it as the scene's sky. The user has the option to request another random sky.
 
 - [demo](http://vlad.balan.space/magic/examples/FlickrJump)
-- [source](FlickrJump)
+- [source](flickrJump)
 
 ## A-Frame examples, refactored
 
@@ -19,7 +19,7 @@ The following examples are taken from the [A-Frame examples page](https://aframe
   - [source](https://github.com/aframevr/aframe/tree/master/boilerplate-helloworld)
 - Meteor version using `vladbalan:aframe`:
   - [demo](http://vlad.balan.space/magic/examples/HelloWorld)
-  - [source](HelloWorld)
+  - [source](helloWorld)
 
 
 ### Anime UI
@@ -29,4 +29,4 @@ The following examples are taken from the [A-Frame examples page](https://aframe
   - [source](https://github.com/aframevr/aframe/tree/master/examples/showcase-anime-UI)
 - Meteor version using `vladbalan:aframe`:
   - [demo](http://vlad.balan.space/magic/examples/AnimeUI)
-  - [source](AnimeUI)
+  - [source](animeUI)
