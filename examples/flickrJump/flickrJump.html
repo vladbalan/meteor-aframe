@@ -3,8 +3,25 @@
 </head>
 <template name="FlickrJump">
   {{#aScene}}
-    {{#aCube button}}{{/aCube}}
-    {{#aCamera camera}}{{/aCamera}}
+    {{#aCamera camera}}
+      {{#aCursor cursor}}{{/aCursor}}
+    {{/aCamera}}
+
+    {{#aSphere button}}
+      {{#aAnimation buttonScale "mouseenter"}}{{/aAnimation}}
+      {{#aAnimation buttonScale "mouseleave"}}{{/aAnimation}}
+    {{/aSphere}}
+
+    {{#aImage buttonGlow}}
+      {{#aAnimation buttonGlowScale "mouseenter"}}{{/aAnimation}}
+      {{#aAnimation buttonGlowScale "mouseleave"}}{{/aAnimation}}
+    {{/aImage}}
+
     {{#aSky flickrSky}}{{/aSky}}
+
+    {{#aSky loadingSky}}
+      {{#aAnimation skyFade "fadeOut"}}{{/aAnimation}}
+      {{#aAnimation skyFade "fadeIn"}}{{/aAnimation}}
+    {{/aSky}}
   {{/aScene}}
 </template>

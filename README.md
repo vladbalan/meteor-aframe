@@ -137,19 +137,36 @@ From A-Frame's [docs](https://aframe.io/docs/core/):
 
 *__Note:__ Templates are not implemented because: a) `<template>` elements are already used by Blaze so it would require some hacky solution to get them working; b) the [A-Frame website](https://aframe.io/docs/core/templates.html) says that templates `will soon be rearchitected and placed on a separate abstraction layer.`; c) you can already use Blaze templates to achieve similar, if not more useful functionality.*
 
+### Extras
+- `aEvent` - add declarative event handlers to your entities.
+
+```handlebars
+{{#aBox button}}
+  {{#aEvent name="mouseenter" scale="0.9 0.9 0.9"}}{{/aEvent}}
+  {{#aEvent name="mouseleave" scale="1 1 1"}}{{/aEvent}}
+{{/aBox}}
+```
+*__Note:__ `aEvent` is not yet featured in the official docs.*
 
 ### Primitives
 From A-Frame's [docs](https://aframe.io/docs/core/):
 > Primitives are concise, semantic building blocks blocks that wrap A-Frame’s underlying entity-component system. A-Frame ships with a handful of built-in primitives for common use cases such as `<a-cube>`, `<a-model>`, and `<a-sky>`.
 
+- `aBox`
 - `aCamera`
-- `aCube`
+- `aCircle`
+- `aColladaModel`
+- `aCone`
+- `aCube` (_deprecated_)
+- `aCursor`
 - `aCurvedimage`
 - `aCylinder`
 - `aImage`
 - `aLight`
-- `aModel`
+- `aModel` (_deprecated_)
+- `aObjModel`
 - `aPlane`
+- `aRing`
 - `aSky`
 - `aSphere`
 - `aVideo`

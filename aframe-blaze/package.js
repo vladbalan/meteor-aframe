@@ -1,6 +1,6 @@
 Package.describe({
   name: 'vladbalan:aframe-blaze',
-  version: '0.2.0',
+  version: '0.3.0',
   summary: 'Create WebVR apps with A-Frame and Blaze',
   git: 'https://github.com/vladbalan/meteor-aframe',
   documentation: 'README.md'
@@ -31,19 +31,30 @@ Package.onUse(function(api) {
     'client/core/aScene.html',
     'client/core/aScene.js',
 
+    // Extras   
+    'client/extras/aEvent.html',    
+    'client/extras/aEvent.js',    
+
     // Primitives
+    'client/primitives/aBox.html',
     'client/primitives/aCamera.html',
+    'client/primitives/aCircle.html',
+    'client/primitives/aColladaModel.html',
+    'client/primitives/aCone.html',
     'client/primitives/aCube.html',
+    'client/primitives/aCursor.html',
     'client/primitives/aCurvedimage.html',
     'client/primitives/aCylinder.html',
     'client/primitives/aImage.html',
     'client/primitives/aLight.html',
     'client/primitives/aModel.html',
+    'client/primitives/aObjModel.html',
     'client/primitives/aPlane.html',
+    'client/primitives/aRing.html',
     'client/primitives/aSky.html',
     'client/primitives/aSphere.html',
     'client/primitives/aVideo.html',
     'client/primitives/aVideosphere.html',
-    'client/primitives/primitives.js',    
+    'client/primitives/primitives.js', 
   ], 'client');
 });
