@@ -34,6 +34,7 @@ Add WebVR goodness to your Meteor app with A-Frame and Blaze.
 - [The packages](#the-packages)
 - [Helpers](#helpers)
   - [Core](#core)
+  - [Extras](#extras)
   - [Primitives](#primitives)
 - [Examples](#examples)
 - [License](#license)
