@@ -5,7 +5,7 @@ Add WebVR goodness to your Meteor app with A-Frame and Blaze.
 
 ## Hello World!
 
-1. Include `https://aframe.io/releases/latest/aframe.js` in your app
+1. Include `https://cdn.rawgit.com/aframevr/aframe/master/dist/aframe.js` in your app
 
 2. Add the package to your app: `meteor add vladbalan:aframe-blaze`
 

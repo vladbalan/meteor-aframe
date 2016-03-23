@@ -142,14 +142,21 @@ From A-Frame's [docs](https://aframe.io/docs/core/):
 From A-Frame's [docs](https://aframe.io/docs/core/):
 > Primitives are concise, semantic building blocks blocks that wrap A-Frame’s underlying entity-component system. A-Frame ships with a handful of built-in primitives for common use cases such as `<a-cube>`, `<a-model>`, and `<a-sky>`.
 
+- `aBox`
 - `aCamera`
-- `aCube`
+- `aCircle`
+- `aColladaModel`
+- `aCone`
+- `aCube` (_deprecated_)
+- `aCursor`
 - `aCurvedimage`
 - `aCylinder`
 - `aImage`
 - `aLight`
-- `aModel`
+- `aModel` (_deprecated_)
+- `aObjModel`
 - `aPlane`
+- `aRing`
 - `aSky`
 - `aSphere`
 - `aVideo`

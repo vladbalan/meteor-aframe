@@ -17,7 +17,7 @@ stringifyComponent = function (componentName, properties) {
   return componentValue;
 }
 
-setAttributes = function (data, templateName, attributeNames) {
+setAttributes = function (data, templateName, attributeNames, primitiveName) {
   var helpers = {}
     attributes = [];
 
@@ -32,6 +32,26 @@ setAttributes = function (data, templateName, attributeNames) {
         attributes.push(component);
       }
   });
+
+  if (primitiveName && PRIMITIVES[primitiveName] && PRIMITIVES[primitiveName].primitive) {
+    var geometryValue = '',
+      geometryKey = false;
+
+    _.each(attributes, function(attribute, key, list){
+      if (attribute.geometry) {
+        geometryValue = attribute.geometry + ';';
+        geometryKey = key;
+      }
+    });
+
+    geometryValue += 'primitive:' + PRIMITIVES[primitiveName].primitive;
+console.log(geometryValue)
+    if (geometryKey) {
+      attributes[geometryKey].geometry = geometryValue;
+    } else {
+      attributes.push({ geometry: geometryValue })
+    }
+  }
   
   Template[templateName].helpers({
     attributes: function () {
