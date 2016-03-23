@@ -31,6 +31,10 @@ Package.onUse(function(api) {
     'client/core/aScene.html',
     'client/core/aScene.js',
 
+    // Extras   
+    'client/extras/aEvent.html',    
+    'client/extras/aEvent.js',    
+
     // Primitives
     'client/primitives/aBox.html',
     'client/primitives/aCamera.html',
@@ -51,6 +55,6 @@ Package.onUse(function(api) {
     'client/primitives/aSphere.html',
     'client/primitives/aVideo.html',
     'client/primitives/aVideosphere.html',
-    'client/primitives/primitives.js',    
+    'client/primitives/primitives.js', 
   ], 'client');
 });

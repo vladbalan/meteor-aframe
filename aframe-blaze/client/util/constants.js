@@ -2,6 +2,7 @@ COMPONENTS = ['camera', 'cursor', 'fog', 'geometry', 'light', 'loader', 'look-at
 ENTITY_ATTRIBUTES = ['id', 'mixin'];
 COORDINATE_SYSTEMS = ['position', 'rotation', 'scale', 'to', 'from'];
 ANIMATION_ATTRIBUTES = ['id', 'attribute', 'begin', 'direction', 'dur', 'easing', 'fill', 'from', 'repeat', 'to'];
+EVENT_ATTRIBUTES = ['id', 'name', 'property', 'target', 'value'];
 COMMON_ATTRIBUTES = ['id', 'position', 'rotation', 'scale', 'visible'];
 PRIMITIVES = {
   aCamera: {
