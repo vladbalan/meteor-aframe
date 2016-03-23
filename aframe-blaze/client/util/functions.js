@@ -45,7 +45,7 @@ setAttributes = function (data, templateName, attributeNames, primitiveName) {
     });
 
     geometryValue += 'primitive:' + PRIMITIVES[primitiveName].primitive;
-console.log(geometryValue)
+    
     if (geometryKey) {
       attributes[geometryKey].geometry = geometryValue;
     } else {
