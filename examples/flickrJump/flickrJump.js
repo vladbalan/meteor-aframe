@@ -149,8 +149,8 @@ Template.FlickrJump.helpers({
     return {
       id: 'jump-button-glow',
       position: [0, -1, -5],
-      height: 1.5,
-      width: 1.5,
+      height: 1.7,
+      width: 1.7,
       color: 'transparent',
       src: '../_assets/images/glow.png',
       visible: tmpl.isButtonVisible.get()
@@ -163,17 +163,6 @@ Template.FlickrJump.helpers({
       dur: 150,
       initialValue: [1, 1, 1],
       finalValue: [1.1, 1.1, 1.1],
-      initialEvent: 'mouseenter',
-      finalEvent: 'mouseleave',
-    });
-  },
-  buttonGlowScale: function (begin) {
-     return Template.instance().animate({
-      attribute: 'scale',
-      begin: begin,
-      dur: 150,
-      initialValue: [1, 1, 1],
-      finalValue: [1.2, 1.2, 1.2],
       initialEvent: 'mouseenter',
       finalEvent: 'mouseleave',
     });
