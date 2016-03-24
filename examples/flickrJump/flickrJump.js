@@ -7,9 +7,16 @@ Template.FlickrJump.onCreated(function(){
     flickr = new Flickr({
       api_key: 'your-api-key-but-you-should-not-put-it-here'
     }),
-    total = new ReactiveVar(10000),
-    defaultSrc = '../_assets/images/loading-grid.png';
-    
+    total = new ReactiveVar(0),
+    defaultSrc = '../_assets/images/loading-grid.png'
+
+    // This uses FlowRouter, but you cand use Iron Router just as well.
+    // Just remember to set up your route like 'path/to/FlickrJump/:tag?'
+    tag = FlowRouter.getParam('tag');
+  
+  if (tag) {
+    requestObject.tags = tag;
+  }  
   tmpl.src = new ReactiveVar(defaultSrc);
   tmpl.isButtonVisible = new ReactiveVar(false);
 
@@ -30,7 +37,11 @@ Template.FlickrJump.onCreated(function(){
 
   tmpl.fetchTotal = function(){
     tmpl.queryEquirectangularPool(requestObject, function(result){
-      total.set(result.photos.total);
+      if (result.photos.total > 0) {
+        total.set(result.photos.total);
+      } else {
+        alert('There are no results for "' + requestObject.tags + '". Please try a different tag!');
+      }
     });
   }
 
@@ -83,10 +94,13 @@ Template.FlickrJump.onCreated(function(){
     return animation;
   }
   
-  // For performance/demo purposes the pool total defaults to 10k, but this would be a more precise way
-  // tmpl.fetchTotal();
-  
-  tmpl.randomizeSky();
+  tmpl.fetchTotal();
+
+  tmpl.autorun(function(){
+    if (total.get() > 0) {
+      tmpl.randomizeSky();
+    }
+  });
 });
 
 Template.FlickrJump.helpers({
