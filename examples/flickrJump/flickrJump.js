@@ -71,7 +71,7 @@ Template.FlickrJump.onCreated(function(){
 
             setTimeout(function(){
               tmpl.isButtonVisible.set('true');
-            }, 3000);
+            }, 1500);
           }).fail(function() { 
             // If the photo is unavailable, try another random photo
             tmpl.randomizeSky();
