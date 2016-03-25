@@ -15,14 +15,14 @@ Template.FlickrJump.onCreated(function(){
     tag = FlowRouter.getParam('tag');
   
   if (tag) {
-    requestObject.tags = tag;
+    requestObject.text = tag;
   }  
   tmpl.src = new ReactiveVar(defaultSrc);
   tmpl.isButtonVisible = new ReactiveVar(false);
 
   // Abstracted common code for querying the Flickr API
   tmpl.queryEquirectangularPool = function(requestObject, callback){
-    flickr.groups.pools.getPhotos(requestObject, function(err, result) {
+    flickr.photos.search(requestObject, function(err, result) {
       if (err) { 
         console.error(err);
       } else {
