@@ -10,10 +10,6 @@ Template.FlickrJump.onCreated(function(){
     total = new ReactiveVar(0),
     defaultSrc = '../_assets/images/loading-grid.png'
 
-    // This uses FlowRouter, but you cand use Iron Router just as well.
-    // Just remember to set up your route like 'path/to/FlickrJump/:tag?'
-    tag = FlowRouter.getParam('tag');
-  
   if (tag) {
     requestObject.text = tag;
   }  
@@ -22,17 +18,27 @@ Template.FlickrJump.onCreated(function(){
 
   // Abstracted common code for querying the Flickr API
   tmpl.queryEquirectangularPool = function(requestObject, callback){
-    flickr.photos.search(requestObject, function(err, result) {
-      if (err) { 
-        console.error(err);
-      } else {
-        if (result && result.stat === 'ok') {
-          callback(result);
+    // This uses FlowRouter, but you cand use Iron Router just as well.
+    // Just remember to set up your route like 'path/to/FlickrJump/:tag?'
+    var string = FlowRouter.getParam('tag'),
+      processResult = function(err, result) {
+        if (err) { 
+          console.error(err);
         } else {
-          console.warn('Result stat: ' + result && result.stat);
+          if (result && result.stat === 'ok') {
+            callback(result);
+          } else {
+            console.warn('Result stat: ' + result && result.stat);
+          }
         }
-      }
-    });
+      };
+
+    if (string && string.length) {
+      requestObject.text = string;
+      flickr.photos.search(requestObject, processResult);
+    } else {
+      flickr.groups.pools.getPhotos(requestObject, processResult);
+    }
   }
 
   tmpl.fetchTotal = function(){
@@ -40,7 +46,7 @@ Template.FlickrJump.onCreated(function(){
       if (result.photos.total > 0) {
         total.set(result.photos.total);
       } else {
-        alert('There are no results for "' + requestObject.tags + '". Please try a different tag!');
+        alert('There are no results for "' + requestObject.tags + '". Please try a different string!');
       }
     });
   }
