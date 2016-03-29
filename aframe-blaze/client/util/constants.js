@@ -1,9 +1,9 @@
 COMPONENTS = ['camera', 'cursor', 'fog', 'geometry', 'light', 'loader', 'look-at', 'look-controls', 'material', 'position', 'raycaster', 'rotation', 'scale', 'sound', 'visible', 'wasd-controls'];
-ENTITY_ATTRIBUTES = ['id', 'mixin'];
+ENTITY_ATTRIBUTES = ['id', 'class', 'mixin'];
 COORDINATE_SYSTEMS = ['position', 'rotation', 'scale', 'to', 'from'];
-ANIMATION_ATTRIBUTES = ['id', 'attribute', 'begin', 'direction', 'dur', 'easing', 'fill', 'from', 'repeat', 'to'];
-EVENT_ATTRIBUTES = ['id', 'name', 'property', 'target', 'value'];
-COMMON_ATTRIBUTES = ['id', 'position', 'rotation', 'scale', 'visible'];
+ANIMATION_ATTRIBUTES = ['id', 'class', 'attribute', 'begin', 'direction', 'dur', 'easing', 'fill', 'from', 'repeat', 'to'];
+EVENT_ATTRIBUTES = ['id', 'class', 'name', 'property', 'target', 'value'];
+COMMON_ATTRIBUTES = ['id', 'class', 'position', 'rotation', 'scale', 'visible'];
 PRIMITIVES = {
   aCamera: {
     name: 'aCamera',

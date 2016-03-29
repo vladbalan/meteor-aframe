@@ -1,6 +1,10 @@
 Meteor A-Frame Package Change Log
 ==================================
 
+## 0.3.1 - March 29, 2016
+
+* Setting `class` attributes now works as expected
+
 ## 0.3.0 - March 23, 2016
 
 * Upgrade to aframe 0.2.0-rc1
